@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bower_components/video.js/dist/video-js/video.js
+//= require bower_components/BigVideo.js/lib/bigvideo.js
 //= require turbolinks
 //= require_tree .

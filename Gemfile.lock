@@ -39,6 +39,7 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (6.0.0)
     coffee-rails (4.1.0)
@@ -145,6 +146,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bower-rails (~> 0.10.0)
   byebug
   jbuilder (~> 2.0)
   jquery-rails
@@ -160,4 +162,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.2
+   1.10.6
