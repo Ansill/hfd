@@ -1,9 +1,110 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+  font-family: 'Bebas';
+  // src:font-url('/app/assets/fonts/bebas.ttf');
+  src:font-url('/app/assets/fonts/bebas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  // src:font-url('/app/assets/fonts/coolvetica.ttf');
+  src:font-url('/app/assets/fonts/coolvetica.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'intrique-script';
+  // src:font-url('/app/assets/fonts/intrique-script.ttf');
+  src:font-url('intrique-script.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'league-gothic';
+  src:font-url('league-gothic/leaguegothic-regular-webfont.eot');
+  src:font-url('league-gothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('league-gothic/leaguegothic-regular-webfont.svg') format('svg'),
+    font-url('league-gothic/leaguegothic-regular-webfont.woff') format('woff'),
+    font-url('league-gothic/leaguegothic-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'league-script';
+  src:font-url('league-script/LeagueScriptNumberOne-webfont.eot');
+  src:font-url('league-script/LeagueScriptNumberOne-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('league-script/LeagueScriptNumberOne-webfont.svg') format('svg'),
+    font-url('league-script/LeagueScriptNumberOne-webfont.woff') format('woff'),
+    font-url('league-script/LeagueScriptNumberOne-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich-bold';
+  src:font-url('ostrich-bold/ostrich-sans-bold.eot');
+  src:font-url('ostrich-bold/ostrich-sans-bold.eot?#iefix') format('embedded-opentype'),
+    font-url('ostrich-bold/ostrich-sans-bold.svg') format('svg'),
+    font-url('ostrich-bold/ostrich-sans-bold.woff') format('woff'),
+    font-url('ostrich-bold/ostrich-sans-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ostrich-reg';
+  src:font-url('ostrich-reg/ostrich-sans-black.eot');
+  src:font-url('ostrich-reg/ostrich-sans-black.eot?#iefix') format('embedded-opentype'),
+    font-url('ostrich-reg/ostrich-sans-black.svg') format('svg'),
+    font-url('ostrich-reg/ostrich-sans-black.woff') format('woff'),
+    font-url('ostrich-reg/ostrich-sans-black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#big-video-wrap{
+	position: absolute;
+	margin-top: 150px;
+}
 body{
-	background-color: blue;
-	color:gray;
+	background-color: #fff;
+	margin: 0px;
+}
+
+
+header{
+	position: relative;
+	text-align: center;
+	height: 150px;
+	width: 100%;
+	.logo{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		h1{
+			color: 
+		}
+
+		.large-text{
+			font-family: 'ostrich-reg';
+			font-size: 50px;
+			line-height: 40px;
+			text-transform: uppercase;
+			margin: 0px;
+			letter-spacing: 4px;
+		}
+		.for{
+			font-family: 'league-script';
+			font-size: 30px;
+			line-height: 20px;
+			margin: 0px;
+			margin-top: -4px;
+		}
+	}
 }
