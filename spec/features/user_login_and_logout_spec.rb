@@ -2,15 +2,13 @@ require 'rails_helper'
 
 feature "User logs in and logs out" do
 
-  # `js: true` spec metadata means this will run using the `:selenium`
-  # browser driver configured in spec/support/capybara.rb
   scenario "with correct details" do
 
     create(:user)
 
     visit "/"
 
-    click_link "Login"
+    visit new_user_session_path
     expect(page).to have_css("h2", text: "Log in")
     expect(current_path).to eq(new_user_session_path)
 
@@ -22,7 +20,7 @@ feature "User logs in and logs out" do
     expect(current_path).to eq "/"
     expect(page).to have_content "Signed in successfully"
 
-    click_link "Logout"
+    click_link "Log out"
 
     expect(current_path).to eq "/"
     expect(page).to have_content "Signed out successfully"
