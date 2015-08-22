@@ -16,6 +16,10 @@ gem 'uglifier', '>= 1.3.0'
 
 gem "bower-rails", "~> 0.10.0"
 
+gem 'devise'
+
+gem 'faker'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -45,6 +49,12 @@ group :test do
 end
 
 group :development, :test do
+
+  gem 'capybara'
+
+  gem 'selenium-webdriver'
+
+  gem 'chromedriver-helper'
 
   gem 'rspec-rails', '~> 3.0.0'
 
