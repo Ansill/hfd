@@ -13,4 +13,6 @@
  *= require bower_components/BigVideo.js/css/bigvideo.css
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */

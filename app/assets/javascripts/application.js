@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require bower_components/video.js/dist/video-js/video.js
 //= require bower_components/BigVideo.js/lib/bigvideo.js
 //= require bower_components/bower-skrollr/skrollr.min.js
 //= require turbolinks
 //= require_tree .
+
+$(function(){ $(document).foundation(); });

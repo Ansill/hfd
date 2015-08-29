@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Hfd</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<header class="hfd-header">
-		<nav class="desktop-nav">
-			<div class="left-nav">
-				<a href="">ABOUT</a>
-				<a href="">ARCHIVE</a>
-			</div>
-			<div class="logo">
-				<h1 class="large-text">hotel</h1>
-				<h2 class="for">for</h2>
-				<h1 class="large-text">dads</h1>
-			</div>
-			<div class="right-nav">
-				<a href="">CONTACT</a>
-			</div>
-		</nav>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	</header> 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <title><%= content_for?(:title) ? yield(:title) : "Hotel For Dads" %></title>
 
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-	
+  <body>
+  	<header class="hfd-header">
+  		<nav class="desktop-nav">
+  			<div class="left-nav">
+  				<a href="">ABOUT</a>
+  				<a href="">ARCHIVE</a>
+  			</div>
+  			<div class="logo">
+  				<h1 class="large-text">hotel</h1>
+  				<h2 class="for">for</h2>
+  				<h1 class="large-text">dads</h1>
+  			</div>
+  			<div class="right-nav">
+  				<a href="">CONTACT</a>
+  			</div>
+  		</nav>
 
+  	</header> 
 
-<%= yield %>
-</body>
+    <%= yield %>
+
+  </body>
 </html>

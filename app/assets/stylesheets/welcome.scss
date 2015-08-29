@@ -1,6 +1,18 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// COLOR SCHEME 1
+$mint: #E4FDE1;
+$seafoam: #8ACB88;
+$gold: #FE9920;
+$orange: #FF4E00;
+$grey: #384D48;
+
+// COLOR SCHEME 2
+$olive: #576D37;
+
+
 @font-face {
   font-family: 'Bebas';
   // src:font-url('/app/assets/fonts/bebas.ttf');
@@ -114,6 +126,7 @@ header{
   .desktop-nav{
     a{
       font-size: 22px;
+      margin-top: 15px;
     }
     .left-nav{
       float: left;
@@ -135,4 +148,11 @@ header{
 	#big-video-wrap{
 		position: absolute;
 	}
+}
+
+
+
+// SIGNIN
+.form-wrapper{
+
 }
