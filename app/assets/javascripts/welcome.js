@@ -3,7 +3,10 @@
 
 $(document).ready(function(){
 	$(function() {
-    var BV = new $.BigVideo();
+    var BV = new $.BigVideo({
+    	container: $(".hero-vid"),
+    	controls: false
+    });
     BV.init();
     BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
 	});
