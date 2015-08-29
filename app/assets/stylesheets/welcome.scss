@@ -11,6 +11,10 @@ $grey: #384D48;
 
 // COLOR SCHEME 2
 $olive: #576D37;
+$brown: #5D3A00;
+$forest: #2F4B26;
+$yellow: #E9CE2C;
+$coral: #D35930;
 
 
 @font-face {
@@ -79,8 +83,27 @@ $olive: #576D37;
   font-style: normal;
 }
 
-
-
+body, html{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  background-color: $mint;
+  width: 100%;
+  height: 100%;
+}
+// BACKGROUND VIDEO
+.hero-vid{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 105px;
+  margin-bottom: -105px;
+  overflow: hidden;
+  #big-video-wrap{
+    position: absolute;
+  }
+}
 .vjs-hidden{
 	display: none;
 }
@@ -89,7 +112,7 @@ body{
 	margin: 0px;
 }
 
-
+// NAVIGATION
 header{
 	position: relative;
 	text-align: center;
@@ -138,21 +161,76 @@ header{
 }
 
 
-.hero-vid{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 105px;
-	margin-bottom: -105px;
-	overflow: hidden;
-	#big-video-wrap{
-		position: absolute;
-	}
-}
-
-
 
 // SIGNIN
 .form-wrapper{
+  font-family: "bebas";
+  letter-spacing: 1px;
+  text-align: center;
+  h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'league-gothic';
+    font-size: 60px;
+    line-height: 60px;
+    margin: 50px 0px 0px;
+    // letter-spacing: 4px;
+    color: $coral;
+  }
+  ::-webkit-input-placeholder {
+     color: $mint;
+     font-family: 'league-gothic';
+     letter-spacing: 2px;
+  }
 
+  :-moz-placeholder { /* Firefox 18- */
+     color: $mint; 
+     font-family: 'league-gothic';
+     letter-spacing: 2px; 
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $mint; 
+     font-family: 'league-gothic';
+     letter-spacing: 2px; 
+  }
+
+  :-ms-input-placeholder {  
+     color: $mint; 
+     font-family: 'league-gothic';
+     letter-spacing: 2px; 
+  }
+  input{
+
+    background-color: $seafoam;
+    color: $mint;
+    border: 2px solid $seafoam;
+    &:focus{
+      border-color: $coral;
+      background-color: $seafoam;
+    }
+  }
+  .actions{
+    text-align: center;
+  }
+  .submit-button{
+    background-color: $mint;
+    border: 2px solid $coral;
+    color: $coral;
+    font-family: "bebas";
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .4s ease;
+    margin: 15px 0px;
+    &:hover{
+      color: $mint;
+      background-color: $coral;
+      transition: all .4s ease;
+    }
+  }
+  .forgot-pw{
+    color: $coral;
+    text-align: center;
+  }
 }
