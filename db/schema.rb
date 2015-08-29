@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822200144) do
+ActiveRecord::Schema.define(version: 20150822213009) do
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "name",                 limit: 255
+    t.string   "position",             limit: 255
+    t.text     "biography",            limit: 65535
+    t.string   "facebook_url",         limit: 255
+    t.string   "instagram_url",        limit: 255
+    t.string   "twitter_url",          limit: 255
+    t.string   "youtube_url",          limit: 255
+    t.string   "picture_file_name",    limit: 255
+    t.string   "picture_content_type", limit: 255
+    t.integer  "picture_file_size",    limit: 4
+    t.datetime "picture_updated_at"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

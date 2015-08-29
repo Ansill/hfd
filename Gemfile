@@ -20,6 +20,8 @@ gem 'devise'
 
 gem 'faker'
 
+gem "paperclip", "~> 4.3"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -45,7 +47,7 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'shoulda-matchers', '3.0.0.rc1'
+  gem 'shoulda-matchers'
 end
 
 group :development, :test do
