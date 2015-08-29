@@ -108,6 +108,20 @@ header{
 			margin-top: -4px;
 		}
 	}
+  nav{
+    font-family: 'ostrich-reg';
+  }
+  .desktop-nav{
+    a{
+      font-size: 22px;
+    }
+    .left-nav{
+      float: left;
+    }
+    .right-nav{
+      float: right;
+    }
+  }
 }
 
 
