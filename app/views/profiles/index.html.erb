@@ -6,6 +6,8 @@
   <%= profile.facebook_url %>
   <%= profile.instagram_url %>
   <%= profile.twitter_url %>
-  <%= link_to "Edit", edit_profile_path(profile) %>
-  <%= link_to "Delete", profile_path(profile), method: :delete %>
+  <% if user_signed_in? %>
+    <%= link_to "Edit", edit_profile_path(profile) %>
+    <%= link_to "Delete", profile_path(profile), method: :delete %>
+  <% end %>
 <% end %>
