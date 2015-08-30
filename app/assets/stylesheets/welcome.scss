@@ -16,6 +16,13 @@ $forest: #2F4B26;
 $yellow: #E9CE2C;
 $coral: #D35930;
 
+// COLOR SCHEME 3
+$grey-brown: #6B6456;
+$army: #3E5641;
+$peach: #EF946C;
+$gold-yellow: #DB8E01;
+$bright-orange: #F1511C;
+
 
 @font-face {
   font-family: 'Bebas';
@@ -123,9 +130,7 @@ header{
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		// h1{
-		// 	color
-		// }
+
 
 		.large-text{
 			font-family: 'ostrich-reg';
@@ -134,6 +139,7 @@ header{
 			text-transform: uppercase;
 			margin: 0px;
 			letter-spacing: 4px;
+      color: $peach;
 		}
 		.for{
 			font-family: 'league-script';
@@ -141,6 +147,7 @@ header{
 			line-height: 20px;
 			margin: 0px;
 			margin-top: -4px;
+      color: $bright-orange;
 		}
 	}
   nav{
