@@ -1,1 +1,11 @@
-
+<% @profiles.each do |profile| %>
+  <%= image_tag profile.picture.url(:thumb) %>
+  <%= profile.name %>
+  <%= profile.position %>
+  <%= profile.biography %>
+  <%= profile.facebook_url %>
+  <%= profile.instagram_url %>
+  <%= profile.twitter_url %>
+  <%= link_to "Edit", edit_profile_path(profile) %>
+  <%= link_to "Delete", profile_path(profile), method: :delete %>
+<% end %>

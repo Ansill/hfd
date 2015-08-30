@@ -17,6 +17,10 @@ gem "skrollr-rails"
 
 gem "foundation-rails"
 
+gem 'delayed_paperclip'
+
+gem 'aws-sdk', '< 2.0'
+
 gem "bower-rails", "~> 0.10.0"
 
 gem 'devise'
