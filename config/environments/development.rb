@@ -38,6 +38,13 @@ Rails.application.configure do
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => 'hotel-for-dads-development'
+    }
+  }
+
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Raises error for missing translations

@@ -22,6 +22,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+aws.yml
 **.orig
 rerun.txt
 pickle-email-*.html

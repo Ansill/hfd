@@ -15,6 +15,10 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem "foundation-rails"
 
+gem 'delayed_paperclip'
+
+gem 'aws-sdk', '< 2.0'
+
 gem "bower-rails", "~> 0.10.0"
 
 gem 'devise'
