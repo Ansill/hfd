@@ -22,7 +22,22 @@ feature "User logs in and logs out" do
     click_link "Log out"
 
     expect(current_path).to eq "/"
+  end
 
+  scenario 'with incorrect details' do
+
+    create(:user)
+
+    visit '/'
+
+    visit new_user_session_path
+    expect(current_path).to eq(new_user_session_path)
+
+    fill_in "user_email", with: ''
+    fill_in "user_password", with: ''
+
+    click_button "Log in"
+    expect(current_path).to eq '/admin/sign_in'
   end
 
 end
