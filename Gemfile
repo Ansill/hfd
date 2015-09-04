@@ -17,6 +17,8 @@ gem "skrollr-rails"
 
 gem "foundation-rails"
 
+gem 'jquery-validation-rails'
+
 gem 'delayed_paperclip'
 
 gem 'aws-sdk', '< 2.0'
@@ -58,6 +60,8 @@ group :test do
 end
 
 group :development, :test do
+
+  gem 'launchy'
 
   gem 'capybara'
 
