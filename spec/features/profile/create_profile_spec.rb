@@ -21,7 +21,52 @@ feature "User creates profile" do
     sign_in
     visit new_profile_path
     click_button 'Create Profile'
-    expect(page).to have_content("Profile not created")
+    expect(page).to have_content("Picture can't be blank")
+    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("Position can't be blank")
+    expect(page).to have_content("Biography can't be blank")
+  end
+
+  scenario 'with bad data for name' do
+    sign_in
+    visit new_profile_path
+    attach_file 'profile_picture', 'spec/fixtures/test.jpeg'
+    fill_in 'profile_position', with: 'Cameraman'
+    fill_in 'profile_biography', with: Faker::Lorem.paragraph(1)
+    fill_in 'profile_facebook_url', with: Faker::Internet.url
+    fill_in 'profile_instagram_url', with: Faker::Internet.url
+    fill_in 'profile_twitter_url', with: Faker::Internet.url
+    fill_in 'profile_youtube_url', with: Faker::Internet.url
+    click_button 'Create Profile'
+    expect(page).to have_content("Name can't be blank")
+  end
+
+  scenario 'with bad data for position' do
+    sign_in
+    visit new_profile_path
+    attach_file 'profile_picture', 'spec/fixtures/test.jpeg'
+    fill_in 'profile_name', with: Faker::Name.name
+    fill_in 'profile_biography', with: Faker::Lorem.paragraph(1)
+    fill_in 'profile_facebook_url', with: Faker::Internet.url
+    fill_in 'profile_instagram_url', with: Faker::Internet.url
+    fill_in 'profile_twitter_url', with: Faker::Internet.url
+    fill_in 'profile_youtube_url', with: Faker::Internet.url
+    click_button 'Create Profile'
+    expect(page).to have_content("Position can't be blank")
+  end
+
+  scenario 'with bad data for biography' do
+    sign_in
+    visit new_profile_path
+    attach_file 'profile_picture', 'spec/fixtures/test.jpeg'
+    fill_in 'profile_name', with: Faker::Name.name
+    fill_in 'profile_position', with: 'Cameraman'
+    fill_in 'profile_facebook_url', with: Faker::Internet.url
+    fill_in 'profile_instagram_url', with: Faker::Internet.url
+    fill_in 'profile_twitter_url', with: Faker::Internet.url
+    fill_in 'profile_youtube_url', with: Faker::Internet.url
+    click_button 'Create Profile'
+    expect(page).to have_content("Biography can't be blank")
   end
 
 private
