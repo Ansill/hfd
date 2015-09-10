@@ -6,6 +6,16 @@
   font-family: 'Bebas';
   // src:font-url('/app/assets/fonts/bebas.ttf');
   src:font-url('bebas.ttf') format('truetype');
+<<<<<<< HEAD
+=======
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Coolvetica';
+  // src:font-url('/app/assets/fonts/coolvetica.ttf');
+  src:font-url('/app/assets/fonts/coolvetica.ttf') format('truetype');
+>>>>>>> 90d870058792b131d17d4345a451643f10fe634b
   font-weight: normal;
   font-style: normal;
 }
@@ -245,21 +255,21 @@ header{
   }
 
   :-moz-placeholder { /* Firefox 18- */
-     color: $mint; 
+     color: $mint;
      font-family: 'league-gothic';
-     letter-spacing: 2px; 
+     letter-spacing: 2px;
   }
 
   ::-moz-placeholder {  /* Firefox 19+ */
-     color: $mint; 
+     color: $mint;
      font-family: 'league-gothic';
-     letter-spacing: 2px; 
+     letter-spacing: 2px;
   }
 
-  :-ms-input-placeholder {  
-     color: $mint; 
+  :-ms-input-placeholder {
+     color: $mint;
      font-family: 'league-gothic';
-     letter-spacing: 2px; 
+     letter-spacing: 2px;
   }
   input{
 

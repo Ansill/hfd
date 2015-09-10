@@ -22,14 +22,19 @@
   			<a href="/" class="logo">
   				<h1 class="large-text" data-hover="hotel">hotel</h1>
   				<h2 class="for">for</h2>
+
   				<h1 class="large-text" style="font-size:52px;" data-hover="dads">dads</h1>
   			</a>
   			<div class="right-nav cl-effect-11">
   				<a href="" data-hover="CONTACT">CONTACT</a>
+           <%= render 'devise/shared/log_out' %>
   			</div>
   		</nav>
 
-  	</header> 
+  	</header>
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
 
     <%= yield %>
 

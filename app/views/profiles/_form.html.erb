@@ -1,11 +1,22 @@
-<%= form_for @profile, html: { multipart: true } do |f| %>
-  <%= f.file_field :picture %>
-  <%= f.text_field :name, placeholder: "NAME" %>
-  <%= f.text_field :position, placeholder: "POSITION" %>
-  <%= f.text_area :biography, placeholder: "BIOGRAPHY" %>
-  <%= f.text_field :facebook_url %>
-  <%= f.text_field :instagram_url %>
-  <%= f.text_field :twitter_url %>
-  <%= f.text_field :youtube_url %>
-  <%= f.submit %>
+<% if @profile.errors.any? %>
+  <ul>
+    <% @profile.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
 <% end %>
+<div class = "row">
+  <div class="small-12 columns">
+    <%= form_for @profile, html: { multipart: true } do |f| %>
+      <%= f.file_field :picture %>
+      <%= f.text_field :name, placeholder: "NAME" %>
+      <%= f.text_field :position, placeholder: "POSITION" %>
+      <%= f.text_area :biography, placeholder: "BIOGRAPHY" %>
+      <%= f.text_field :facebook_url %>
+      <%= f.text_field :instagram_url %>
+      <%= f.text_field :twitter_url %>
+      <%= f.text_field :youtube_url %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
