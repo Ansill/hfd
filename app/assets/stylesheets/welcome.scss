@@ -2,42 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// COLOR SCHEME 1
-$mint: #E4FDE1;
-$seafoam: #8ACB88;
-$gold: #FE9920;
-$orange: #FF4E00;
-$grey: #384D48;
-
-// COLOR SCHEME 2
-$olive: #576D37;
-$brown: #5D3A00;
-$forest: #2F4B26;
-$yellow: #E9CE2C;
-$coral: #D35930;
-
-// COLOR SCHEME 3
-$grey-brown: #6B6456;
-$army: #3E5641;
-$peach: #EF946C;
-$gold-yellow: #DB8E01;
-$bright-orange: #F1511C;
-
-
 @font-face {
   font-family: 'Bebas';
   // src:font-url('/app/assets/fonts/bebas.ttf');
-  src:font-url('/app/assets/fonts/bebas.ttf') format('truetype');
+  src:font-url('bebas.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Coolvetica';
-  // src:font-url('/app/assets/fonts/coolvetica.ttf');
-  src:font-url('/app/assets/fonts/coolvetica.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
+
 @font-face {
   font-family: 'intrique-script';
   // src:font-url('/app/assets/fonts/intrique-script.ttf');
@@ -47,26 +20,16 @@ $bright-orange: #F1511C;
 }
 
 @font-face {
-  font-family: 'league-gothic';
-  src:font-url('league-gothic/leaguegothic-regular-webfont.eot');
-  src:font-url('league-gothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    font-url('league-gothic/leaguegothic-regular-webfont.svg') format('svg'),
-    font-url('league-gothic/leaguegothic-regular-webfont.woff') format('woff'),
-    font-url('league-gothic/leaguegothic-regular-webfont.ttf') format('truetype');
+  font-family: 'lemonmilk';
+  src:font-url('lemonmilk/lemonmilk-webfont.eot');
+  src:font-url('lemonmilk/lemonmilk-webfont.eot?#iefix') format('embedded-opentype'),
+    font-url('lemonmilk/lemonmilk-webfont.svg') format('svg'),
+    font-url('lemonmilk/lemonmilk-webfont.woff') format('woff'),
+    font-url('lemonmilk/lemonmilk-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'league-script';
-  src:font-url('league-script/LeagueScriptNumberOne-webfont.eot');
-  src:font-url('league-script/LeagueScriptNumberOne-webfont.eot?#iefix') format('embedded-opentype'),
-    font-url('league-script/LeagueScriptNumberOne-webfont.svg') format('svg'),
-    font-url('league-script/LeagueScriptNumberOne-webfont.woff') format('woff'),
-    font-url('league-script/LeagueScriptNumberOne-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'ostrich-bold';
@@ -90,9 +53,40 @@ $bright-orange: #F1511C;
   font-style: normal;
 }
 
+
+// COLOR SCHEME 1
+$mint: #E4FDE1;
+$seafoam: #8ACB88;
+$gold: #FE9920;
+$orange: #FF4E00;
+$grey: #384D48;
+
+// COLOR SCHEME 2
+$olive: #576D37;
+$brown: #5D3A00;
+$forest: #2F4B26;
+$yellow: #E9CE2C;
+$coral: #D35930;
+
+// COLOR SCHEME 3
+$grey-brown: #6B6456;
+$army: #3E5641;
+$peach: #EF946C;
+$gold-yellow: #DB8E01;
+$bright-orange: #F1511C;
+
+$navy: #0B2027;
+$dkgreen: #002400;
+// #81AE9D
+
 body, html{
   width: 100%;
   height: 100%;
+  -webkit-font-smoothing: antialiased; 
+}
+
+a{
+  color: $seafoam;
 }
 .container{
   background-color: $mint;
@@ -104,9 +98,27 @@ body, html{
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 105px;
-  margin-bottom: -105px;
+  top: 0px;
+  z-index: -10;
   overflow: hidden;
+  // .overlay{
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0px;
+  //   left: 0px;
+  //   background: rgba(255,255,255,.7);
+  //   // z-index: -8;
+  //   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.65+0,0+100;Neutral+Density */
+  //   background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+  //   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); Chrome,Safari4+
+  //   background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+  //   background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+  //   background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+  //   background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+  // }
   #big-video-wrap{
     position: absolute;
   }
@@ -133,30 +145,72 @@ header{
 
 
 		.large-text{
-			font-family: 'ostrich-reg';
-			font-size: 40px;
-			line-height: 30px;
-			text-transform: uppercase;
-			margin: 0px;
-			letter-spacing: 4px;
+      font-family: 'lemonmilk';
+      font-size: 40px;
+      line-height: 46px;
+      text-transform: uppercase;
+      margin: 0px;
+      letter-spacing: 4px;
+      transition: all .4s ease;
       color: $peach;
+      position: relative;
+      z-index: -1;
+      &:before{
+        position: absolute;
+        top: -10px;
+        left: 0;
+        overflow: hidden;
+        padding: 10px 0;
+        max-width: 0;
+        color: $orange;
+        content: attr(data-hover);
+        -webkit-transition: max-width 0.5s;
+        -moz-transition: max-width 0.5s;
+        transition: max-width 0.5s;
+        white-space: nowrap;
+      }
 		}
 		.for{
-			font-family: 'league-script';
-			font-size: 30px;
-			line-height: 20px;
-			margin: 0px;
-			margin-top: -4px;
-      color: $bright-orange;
+      font-family: 'intrique-script';
+      font-size: 80px;
+      line-height: 20px;
+      margin: 0px;
+      margin-top: -4px;
+      color: lightpink;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -22px 0 0 -35px;
+      transform: rotateZ(-22deg);
+      transition: all .4s ease;
+
+
 		}
+    &:hover{
+      .large-text{
+        letter-spacing: 1px;
+        transition: all .4s ease;
+          &:before{
+            max-width: 100%;
+          }
+      }
+      .for{
+        font-size: 94px;
+        transition: all .5s ease;
+      }
+    }
 	}
   nav{
-    font-family: 'ostrich-reg';
+    font-family: 'bebas';
   }
   .desktop-nav{
     a{
       font-size: 22px;
-      margin-top: 15px;
+      letter-spacing: 2px;
+      margin: 0 15px;
+    }
+    .left-nav, .right-nav{
+      margin-top: 20px;
     }
     .left-nav{
       float: left;
@@ -241,3 +295,307 @@ header{
     text-align: center;
   }
 }
+
+
+
+
+.ps-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: #555;
+  background: #fff;
+}
+
+.ps-container > div {
+  position: absolute;
+  width: 50%;
+}
+
+.ps-container > div > div,
+.ps-slidewrapper > nav,
+.ps-slides > div {
+  position: absolute;
+}
+
+
+.ps-header {
+  top: 0px;
+  left: 0px;
+  height: 150px;
+  z-index: 1001;
+  background: #fff;
+}
+
+.ps-header h1 {
+  color: #ccc;
+  line-height: 150px;
+  margin: 0;
+  padding: 0 50px;
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+.ps-contentwrapper {
+  top: 100px;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.ps-content {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+
+.ps-content h2 {
+  padding: 10px 15px;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  letter-spacing: 4px;
+  margin: 10px 0 30px;
+  text-align: right;
+  font-weight: 700;
+  font-family: 'bebas';
+}
+
+.ps-content p {
+  line-height: 26px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  padding: 10px 15px;
+  font-weight: 400;
+  text-align: justify;
+  border-left: 1px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+}
+
+.ps-content span.ps-price {
+  float: left;
+  margin: 10px;
+  width: 120px;
+  height: 42px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #f7cfc6;
+  background: rgba(247, 197, 185, 0.8);
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.ps-content a:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+  letter-spacing: 4px;
+  float: right;
+  border: 3px solid #555;
+  padding: 3px;
+  text-indent: 4px;
+}
+
+.no-touch .ps-content a:last-child:hover {
+  color: #b2d79d;
+  border-color: #b2d79d;
+}
+
+.ps-content a:last-child:before {
+  // content: '\53';
+  // font-family: 'icon';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  padding-right: 5px;
+}
+
+.ps-slidewrapper {
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ps-slides {
+  top: 0px;
+  bottom: 200px;
+  width: 100%;
+}
+
+.ps-slides > div {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);
+}
+
+.ps-slidewrapper > nav {
+  width: 100%;
+  height: 200px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+}
+
+.ps-slidewrapper > nav > a {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  float: left;
+  outline: none;
+  box-shadow: inset 0 0 0 9999px rgba(207,227,206,0.8);
+}
+
+.ps-slidewrapper > nav > a:first-child {
+  box-shadow: inset 0 0 0 9999px rgba(233,217,141,0.8);
+}
+
+.no-touch .ps-slidewrapper > nav > a {
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.no-touch .ps-slidewrapper > nav > a:hover {
+  box-shadow: inset 0 0 0 9999px rgba(246,224,121,0.1);
+}
+
+.no-touch .ps-slidewrapper > nav > a:first-child:hover {
+  box-shadow: inset 0 0 0 9999px rgba(249,15,15,0.1);
+}
+
+.ps-slidewrapper > nav > a:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -50px;
+  transform: rotate(45deg);
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+.ps-slidewrapper > nav > a:first-child:after {
+  transform: rotate(-135deg);
+  margin: -80px 0 0 -50px;
+}
+
+.ps-slides > div,
+.ps-slidewrapper > nav > a {
+  background-color: #fff;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+    background-size: cover;
+  background-position: center;
+}
+.ps-move {
+  transition: top 400ms ease-out;
+}
+
+.main-slide-image{
+
+}
+@media screen and (max-width: 860px) {
+
+  .js .ps-container > div {
+    width: 100%;
+  }
+  .js .ps-header {
+    height: 50px;
+  }
+
+  .js .ps-header h1 {
+    line-height: 50px;
+    padding: 0px 20px;
+    letter-spacing: 4px;
+  }
+  .js .ps-slides {
+    bottom: 320px;
+    // top: 50px;
+  }
+
+  .js .ps-slidewrapper > nav {
+    height: 100px;
+  }
+  .js .ps-contentwrapper {
+    top: auto;
+    height: 220px;
+    bottom: 100px;
+  }
+  .js .ps-content {
+    padding: 10px;
+  }
+
+  .js .ps-content h2 {
+    border-right: none;
+    font-size: 18px;
+    margin: 10px 0;
+    padding-top: 0;
+  }
+
+  .js .ps-content span.ps-price {
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .js .ps-content p {
+    line-height: 20px;
+    border: none;
+    padding: 5px 10px;
+    height: 80px;
+    overflow-y: scroll;
+  }
+
+    .js .ps-content a:last-child {
+      font-size: 13px;
+      margin: 10px 20px 0 0;
+    }
+  
+
+}
+
+
+
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.cl-effect-11 a {
+  padding: 10px 0;
+  // border-top: 2px solid #0972b4;
+  color: $seafoam;
+  text-shadow: none;
+  position: relative;
+  font-size: 22px;
+      line-height: 22px;
+  &:before{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    overflow: hidden;
+    padding: 10px 0;
+    max-width: 0;
+    border-bottom: 2px solid $peach;
+    color: $peach;
+    content: attr(data-hover);
+    -webkit-transition: max-width 0.5s;
+    -moz-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+    white-space: nowrap;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  &:hover{
+    &:before{
+      max-width: 100%;
+    }
+  }
+} 
+

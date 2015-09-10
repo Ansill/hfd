@@ -1,11 +1,63 @@
-<% @profiles.each do |profile| %>
-  <%= image_tag profile.picture.url(:thumb) %>
-  <%= profile.name %>
-  <%= profile.position %>
-  <%= profile.biography %>
-  <%= profile.facebook_url %>
-  <%= profile.instagram_url %>
-  <%= profile.twitter_url %>
-  <%= link_to "Edit", edit_profile_path(profile) %>
-  <%= link_to "Delete", profile_path(profile), method: :delete %>
-<% end %>
+
+<div class="hero-vid"></div>
+
+<section id="ps-container" class="ps-container">
+
+	<!-- <div class="ps-header">
+		<h1>Vertical Showcase Slider</h1>
+	</div><!-- /ps-header -->			
+
+	
+	<div class="ps-slidewrapper">
+
+		<% @profiles.each do |profile| %>
+	
+		<%= div_for profile, class:"ps-slides" do %>
+
+			<div style="background-image:url(<%= profile.picture.url %>)" class="main-slide-image"></div>
+
+		<% end %>
+
+		<% end %>
+		
+		<nav>
+			<a href="#" class="ps-prev" ></a>
+			<a href="#" class="ps-next" ></a>
+		</nav>
+		
+	</div><!-- /ps-slidewrapper -->
+
+
+	<div class="ps-contentwrapper">
+
+		<% @profiles.each do |profile| %>
+	
+			<%= div_for profile, class: "ps-content" do %>
+				<%= content_tag_for(:h2, profile) do %>
+					<%= profile.name %>
+				<% end %>
+				<%= content_tag_for(:span, profile, class: "ps-price") do %>
+					<%= profile.position %>
+				<% end %>
+				<%= content_tag_for(:p, profile) do %>
+					<%= profile.biography %>
+					<%= link_to "Edit", edit_profile_path(profile) %>
+					<%= link_to "Delete", profile_path(profile), method: :delete %>
+				<% end %>
+			<% end %>
+		<% end %>
+		
+	</div><!-- /ps-contentwrapper -->
+	
+</section><!-- /ps-container -->
+
+  <%#= image_tag profile.picture.url(:thumb) %>
+  
+  
+  
+  <%#= profile.facebook_url %>
+  <%#= profile.instagram_url %>
+  <%#= profile.twitter_url %>
+
+
+
